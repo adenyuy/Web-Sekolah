@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function login() {
+            // Ambil nilai dari input
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username.toUpperCase() != "MARVIN" && password != 2307411044) {
+                alert("Username dan password salah")
+                return 0;
+            }
+            if (username.toUpperCase() == "MARVIN") {
+
+                if (password == "2307411044") {
+                    window.location.href = 'alumni.html';
+
+                } else {
+                    alert("Password Salah")
+                }
+
+            } else {
+                alert("Username salah")
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+    </div>
+</body>
+
+</html>
